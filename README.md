@@ -13,6 +13,7 @@ I will build an image classifier in an effort to classify waste types. With wast
 
 The CNN notebook begins by creating train and test variables for train and test images. Within the train and test folders are the images, split into the two classifications, Biodegradable and Non-Biodegradable. Images are 3 dimensional. Before Modeling, I rescaled the images to be between 0 and 1, rather than 1 and 255 using ImageDataGenerator. I then generated both labels and data using flow_from_directory since the ImageDataGenerator was used.
 At this point I began building the CNN model. My first layer is resizing the images. I did this in an effort to shorten the time it would take to run the model and to my suprise it did not effect accuracy or loss much. After experimenting with different layers and layer types, my final model has 7 layers total. 2 convolutional2D layers, 2 maxpool2D layers, the resizing layer, a flatten layer, and the output layer with 'sigmoid' activation as this is a binary classificaiton.
+
 Once the CNN model was compiled and fit I decided to add the prebuilt network EfficientNet to the model to try to increase performance. I rescled the images back to be between 1 and 255 and also resized images to 224 pixels by 224 pixels, as this is what EfficientNetB0 calls for. After experimenting with different layer combinations, I settled on a 5 layer construction.
 I plotted histograms to visualize the predictions for both the CNN model and for after when the EffNet was added.
 Using Streamlit I created an image classifier that takes uploaded images and classifies what classification the image falls into.
@@ -29,4 +30,3 @@ ABC Waste Corp. could use the image classification app to process their waste it
 
 Things I would like to look into as the project continues:
 I was working on an SVM model to see if that would perform as well as or better than the CNN Model. Completing that model in hopes of having a better performing model will be done in the near future.
-

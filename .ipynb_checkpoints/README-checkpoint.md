@@ -30,4 +30,3 @@ ABC Waste Corp. could use the image classification app to process their waste it
 
 Things I would like to look into as the project continues:
 I was working on an SVM model to see if that would perform as well as or better than the CNN Model. Completing that model in hopes of having a better performing model will be done in the near future.
-
